@@ -1,0 +1,137 @@
+
+               Precipitation-Runoff Modeling System (PRMS)
+                       Version 5.1.0 03/04/2020
+
+        Process            Available Modules
+--------------------------------------------------------------------
+  Basin Definition: basin
+    Cascading Flow: cascade
+  Time Series Data: obs, water_use_read, dynamic_param_read
+   Potet Solar Rad: soltab
+  Temperature Dist: temp_1sta, temp_laps, temp_dist2, climate_hru
+       Precip Dist: precip_1sta, precip_laps, precip_dist2,
+                    climate_hru
+Temp & Precip Dist: xyz_dist, ide_dist
+    Solar Rad Dist: ccsolrad, ddsolrad, climate_hru
+Transpiration Dist: transp_tindex, climate_hru, transp_frost
+      Potential ET: potet_hamon, potet_jh, potet_pan, climate_hru,
+                    potet_hs, potet_pt, potet_pm, potet_pm_sta
+      Interception: intcp
+     Snow Dynamics: snowcomp
+    Surface Runoff: srunoff_smidx, srunoff_carea
+         Soil Zone: soilzone
+       Groundwater: gwflow
+Streamflow Routing: strmflow, strmflow_in_out, muskingum,
+                    muskingum_lake, muskingum_mann
+Stream Temperature: stream_temp
+    Output Summary: basin_sum, subbasin, map_results, prms_summary,
+                    nhru_summary, nsub_summary, water_balance
+                    basin_summary, nsegment_summary
+     Preprocessing: write_climate_hru, frost_date
+--------------------------------------------------------------------
+
+
+    Active modules listed in the order in which they are called
+
+        Process                   Module                Version Date
+====================================================================
+GSFLOW Computation Order       gsflow_prms                2020-06-17
+Basin Definition               basin                      2019-11-14
+Cascading Flow                 cascade                    2019-09-25
+Common States and Fluxes       climateflow                2020-01-10
+Potential Solar Radiation      soltab                     2016-09-09
+PRMS Set Time Variables        prms_time                  2015-03-31
+Time Series Data               obs                        2020-01-09
+Time Series Data               water_use_read             2017-03-21
+Time Series Data               dynamic_param_read         2019-11-14
+Temperature Distribution       temp_1sta                  2018-01-16
+Precipitation Distribution     precip_1sta                2016-10-21
+Solar Radiation Distribution   ddsolrad                   2019-04-04
+Transpiration Distribution     transp_tindex              2015-01-06
+Potential Evapotranspiration   potet_jh                   2019-04-04
+Canopy Interception            intcp                      2020-03-03
+Snow Dynamics                  snowcomp                   2019-11-27
+Surface Runoff                 srunoff_smidx              2020-03-03
+Soil Zone Computations         soilzone                   2020-01-10
+Groundwater                    gwflow                     2019-04-04
+Streamflow Routing             strmflow                   2014-12-02
+Summary                        basin_sum                  2017-10-21
+Output Summary                 subbasin                   2019-12-02
+Subbasin Output Summary        nsub_summary               2018-05-25
+Output Summary                 prms_summary               2019-06-20
+====================================================================
+
+Using Control File: SRPHM_update_future.control
+
+Using Parameter File: prms_v3_param.params
+
+
+Start time: 2020/10/01 00:00:00
+End time:   2070/09/30 00:00:00
+
+
+Model domain area:       167410.00    Active basin area:    167410.00
+Fraction impervious:        0.1374    Fraction pervious:       0.8626
+
+
+
+
+   Year Month Day   Precip     ET    Storage S-Runoff M-Runoff
+                  (inches) (inches) (inches) (inches) (inches)
+ -------------------------------------------------------------
+ initial                               7.114
+   2021             28.951   15.567    1.451   14.542    0.000
+   2022             25.556   16.367    0.976    7.816    0.000
+   2023             54.347   17.576    1.362   30.405    0.000
+   2024             59.138   19.088    1.875   33.681    0.000
+   2025             51.592   18.811    1.574   27.022    0.000
+   2026             25.223   15.272    1.232    8.270    0.000
+   2027             52.606   20.363    1.460   26.382    0.000
+   2028             24.679   14.949    1.100    8.303    0.000
+   2029             50.755   18.911    1.321   26.136    0.000
+   2030             60.977   19.662    1.633   34.760    0.000
+   2031             34.118   16.953    1.378   14.024    0.000
+   2032             34.748   14.761    1.115   16.757    0.000
+   2033             38.982   17.968    1.238   16.694    0.000
+   2034             45.535   18.219    1.216   23.533    0.000
+   2035             67.757   18.856    1.544   42.391    0.000
+   2036             83.232   20.642    1.729   54.666    0.000
+   2037             37.745   17.100    1.414   17.523    0.000
+   2038             55.803   22.381    1.602   27.947    0.000
+   2039             38.826   17.814    1.206   17.534    0.000
+   2040             48.484   19.568    1.657   23.596    0.000
+   2041             47.972   18.373    1.447   24.143    0.000
+   2042             37.878   21.037    1.527   13.491    0.000
+   2043             14.232   11.561    1.381    2.553    0.000
+   2044             54.439   19.291    1.258   28.785    0.000
+   2045             67.179   18.357    1.554   40.522    0.000
+   2046             38.871   18.193    1.322   16.812    0.000
+   2047             27.715   15.848    1.678    9.389    0.000
+   2048             57.239   18.460    1.489   32.888    0.000
+   2049             47.856   19.008    1.429   23.644    0.000
+   2050             46.602   20.212    2.342   21.008    0.000
+   2051             47.191   18.217    1.565   25.374    0.000
+   2052             38.056   18.130    2.826   15.413    0.000
+   2053             28.199   19.204    1.075    8.814    0.000
+   2054             26.637   16.737    0.893    8.164    0.000
+   2055             30.945   19.001    1.023    9.590    0.000
+   2056             35.885   18.340    1.006   14.141    0.000
+   2057             30.357   17.899    1.022   10.100    0.000
+   2058             41.012   15.618    1.098   21.880    0.000
+   2059             53.270   19.306    1.266   28.826    0.000
+   2060             19.491   14.457    0.863    4.600    0.000
+   2061             36.044   17.749    1.054   15.243    0.000
+   2062             34.090   17.188    1.032   14.045    0.000
+   2063             27.055   15.142    0.953    9.921    0.000
+   2064             28.480   17.877    1.692    8.123    0.000
+   2065             45.828   21.697    1.307   20.038    0.000
+   2066             34.703   19.818    1.384   12.118    0.000
+   2067             24.644   16.405    1.779    6.517    0.000
+   2068             42.990   18.442    1.054   21.866    0.000
+   2069             26.536   17.419    0.954    7.724    0.000
+   2070             33.146   15.066    0.970   15.067    0.000
+ *************************************************************
+ Total for run    2043.595  894.880    0.970  962.781    0.000
+ *************************************************************
+Execution elapsed time   53 minutes 14.93 seconds
+
