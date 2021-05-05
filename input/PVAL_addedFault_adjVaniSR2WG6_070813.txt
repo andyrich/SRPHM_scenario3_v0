@@ -1,4 +1,4 @@
-553	        	      
+555	        	      
 Kh1_win      	1	      
 Kh1_sr       	1	      
 Kh1_cotS     	1	      
@@ -552,6 +552,8 @@ Unident1_5	1.00E+30
 Unident1_6	1.00E+30	
 Unident1_7	1.00E+30	
 Unident1_8	1.00E+30	
+rurfac 1.0
+rurfac_PMA 0.8
 		
 		
 		
